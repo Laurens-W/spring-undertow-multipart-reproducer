@@ -31,12 +31,8 @@ public class DemoApplication {
         produces = {"application/json"},
         consumes = {"multipart/form-data"},
         method = RequestMethod.POST)
-    public ResponseEntity<String> someMethod(@RequestParam("object") SomeObject object) {
+    public ResponseEntity<String> someMethod(@RequestParam("object") String object) {
       return ResponseEntity.ok("Request processed");
     }
-  }
-
-  static class SomeObject {
-    private String data;
   }
 }
